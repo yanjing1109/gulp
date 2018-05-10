@@ -1,0 +1,104 @@
+.slide-focus{
+    $width: 100%;
+    $height: 556px;
+    width:$width;
+    height:$height;
+    overflow: hidden;
+    position: relative;
+    top:-1px;
+    left:-1px;
+    margin-bottom: -1px;
+    .slide{
+        height: $height;   
+        .imgCon{
+            width:$width;
+            height:$height; 
+            overflow:hidden; 
+            position:relative;
+        }
+        .con{ 
+            width: 100%; 
+            height:$height; 
+            background:#eee; 
+            position:absolute; 
+            top:0; 
+            left:50%;
+            margin-left: -($width)/2;
+            display: none;
+            img{
+                // width: 100%;
+            }
+        }
+        .tab{ 
+            $size:8px;
+            height: $size;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            bottom:14px;
+            z-index:100;
+            a,i{
+                @extend %dis-inb;
+                font-style:normal;
+                width: $size;
+                height: $size;
+                line-height: $size*5;
+                border-radius:$size;;    
+                background:rgba(255,255,255,.5);            
+                cursor:pointer; 
+                margin:0 3px; 
+                text-align:center;          
+                overflow: hidden;
+                text-decoration:none;
+                font-size:0;
+                transition: width .3s ease-out;
+                vertical-align: top;                
+                &.current{
+                    width: 30px;
+                    background:#fff;
+                }                
+            }
+        }
+        &:hover{
+            .arrow{
+                display: block;
+            }
+        }
+        .arrow{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            text-align: center;
+            display: block;
+            i{
+                display: inline-block;
+                width:42px;
+                height: 64px;
+                cursor: pointer;
+                margin-top: -32px;
+                background: images('arrow.png') no-repeat left top;
+                position: absolute;
+                top: 0;
+                &.prev{
+                   background-position: 0 0;
+                   left: 30px;
+                    &:hover{
+                        background-position: 0 -66px;
+                    }
+                }
+                &.next{
+                    right: 30px;
+                    background-position: -48px 0;
+                    &:hover{
+                        background-position: -48px -66px;
+                    }
+                }
+            }
+        }       
+    }
+}
+.ie8 .slide-focus .slide .tab i,.ie9 .slide-focus .slide .tab i{
+    background:#fff;
+}

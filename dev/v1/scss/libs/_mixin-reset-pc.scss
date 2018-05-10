@@ -1,0 +1,64 @@
+//[reset]{{{
+@mixin reset($bodyColor, $bodyBgColor, $font, $lnkColor, $lnkColorHover){
+  body{
+    margin: 0 auto;
+    color: $bodyColor;
+    background-color: $bodyBgColor;
+    font: unquote($font);
+    font-family: 'microsoft yahei ui','microsoft yahei',simsun,sans-serif !important;
+  }
+  p, dl, dt, dd, table, td, th, input, img, form, div, span, ul, ol, li, h1, h2, h3, h4, h5, h6, select, input{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  img, iframe{
+    border: none;
+  }
+  ul, li, ol{
+    list-style: none;
+  }
+  img{
+    vertical-align: middle;
+  }
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  input{
+    outline: none;
+  }
+  em, b, i, strong, cite, sub, sup, font{
+    font-size: 100%;
+  }
+  a{
+    color: $lnkColor;
+    text-decoration: none;
+    outline: none;
+    &:hover{
+      color: $lnkColorHover;
+    }
+  }
+  .clearfix{
+    zoom: 1;
+    &:before{
+      content: "";
+      display: table;
+    }
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .clear{
+    clear: both;
+  }
+}
+input::clear,input::receal{display:none}
+input::-ms-clear { display: none; }
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset; }
+//[reset]}}}
+
+// vim:fdm=marker

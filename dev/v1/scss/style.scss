@@ -1,0 +1,19 @@
+// project: www.2345.org 区块链
+// date:    2018-01-09
+// author:  
+
+//libs
+@import 'libs/mixin-css3';
+
+//components
+@import 'components/extend',
+        'components/animation';
+
+body{
+    background:#1f1d2e;
+}
+
+//moduls
+@import 
+        'modules/hardware',
+        'modules/coin';

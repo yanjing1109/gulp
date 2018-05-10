@@ -1,0 +1,17 @@
+
+/// Asset URL builder
+@function asset($type, $file, $http) {
+    @if $http == ''{
+        @return url($asset-base-path + $type + '/' + $file + '?' + $version);
+    }@else{
+        @return url($http + $asset-base-path + $type + '/' + $file + '?' + $version);
+    }
+}
+
+/// Image asset helper
+@function images($file) {
+    @return asset('images', $file,'');
+}
+@function fonts($file) {
+    @return asset('fonts', $file,'');
+}

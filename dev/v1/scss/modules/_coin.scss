@@ -1,0 +1,217 @@
+.coin-box-a{
+    background:#1c1b2b images("coin_bg1.jpg") no-repeat;
+    background-position: center;
+    .inner{
+        height:300px; 
+        position: relative;
+    }
+    .txt{
+        text-align: left;
+        color:#fff;
+        padding: 0 100px;
+        .title{
+            font-size: 46px;
+            margin-bottom: 5px;
+            padding-top: 95px;
+            //text-indent: -25px;
+        }
+        .sub-title{
+            font-size: 24px;
+            font-weight: 100;
+        }
+    }
+    .ball-01,.ball-02,.ball-04{
+        position: absolute;
+        width:14px;
+        height:14px;
+        animation: blink 1.5s .2s infinite linear;
+        &.ball-01{
+            background:images("coin-ball01.png") no-repeat;
+            top:31px;
+            right: 178px;
+        }
+        &.ball-02{
+            background:images("coin-ball02.png") no-repeat;
+            top:135px;
+            right: 68px;
+        }
+        &.ball-04{
+            background:images("coin-ball04.png") no-repeat;
+            top:107px;
+            right:298px ;
+        }
+
+    }
+    .ball-03{
+        position: absolute;
+        width:16px;
+        height:16px;
+        background:images("coin-ball03.png") no-repeat;
+        animation: blink 1.5s .2s infinite linear;
+        top:161px;
+        right: 208px;
+    }
+}
+.coin-box-b{
+    background:#fff;
+    .inner{
+        padding: 0 100px;
+        width:1000px;
+    }
+    .title{
+        font-size: 24px;
+        color:#333;
+        text-align: center;
+        padding-top: 82px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+        font-size: 16px;
+        color:#666;
+        line-height: 26px;    .sub-title{
+
+        margin-top: 25px;
+        padding: 0 90px;
+    }
+    .desc{
+        padding: 38px 0 0;
+        p{
+            padding-left: 15px;
+            background: images("coin_bg_dot.png") no-repeat 0 9px;
+            font-size: 16px;
+            color:#666666;
+            line-height:26px;
+            margin-bottom: 30px;
+        }
+    }
+    .btn-blue{
+        border-radius: 27px;
+        width:236px;
+        height:54px;
+        line-height: 54px;
+        margin:80px auto 100px;
+        display: block;
+        -moz-box-shadow:0 5px 10px #D9F4FF; 
+        -webkit-box-shadow:0 5px 10px #D9F4FF; 
+        box-shadow:0 5px 10px #D9F4FF;
+        .txt{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .btn-blue .i-arrow-right {
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+        background: url(../images/home-spr.png?20180112) no-repeat 0 0;
+        margin-left: 5px;
+    }
+}
+.coin-box-d{
+    background:#f9f9f9;
+    background-position: center;
+    text-align: center;
+    padding-bottom: 100px;
+    .inner{
+        position: relative;
+    }
+    .title{
+        font-size: 25px;
+        color:#333333;
+        font-weight: bold;
+        padding-top: 88px;
+    }
+    .sub-title{
+        padding: 55px 100px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #666666;
+        text-align: left;
+    }
+    .slide-lists{
+        @extend %clearfix;
+        height:180px;
+        position: relative;
+    }
+    .left-lists{
+        background: images("picl.png") no-repeat 328px 81px;
+        left:100px;
+    }
+    .right-lists{
+        background: images("picr.png") no-repeat 331px 76px;
+        right: 100px;
+    }
+    .left-lists,.right-lists{
+        position: absolute;
+        top:0;
+        width:450px;
+        height:180px;
+        background-color: #fff;
+        text-align: left;
+        box-shadow: 0 3px 15px rgba(217,217,229,0.3);
+        .caption{
+            margin-top: 25px;
+            font-size: 18px;
+            color:#333333;
+            font-weight: bold;
+            padding-left: 26px;
+            margin-bottom: 6px;
+            border-left: 2px solid #00aaf0;
+        }
+        .lists{
+            margin-left: 30px;
+            li{
+                font-size: 14px;
+                line-height: 24px;
+                color:#333;
+            }
+        }
+    }
+    .full-lists{
+        width:1000px;
+        height:340px;
+        margin:60px 100px;
+        background-color: #fff;
+        text-align: left;
+        box-shadow: 0 3px 15px rgba(217,217,229,0.3);
+        .placeholder{
+            height:1px;
+        }
+        .caption{
+            font-size: 18px;
+            color:#333333;
+            font-weight: bold;
+            padding-left: 26px;
+            margin-bottom: 15px;
+            margin-top:24px;
+            border-left: 2px solid #00aaf0;
+        }
+        .wffs{
+            padding-left: 30px;
+        }
+    }
+    .read-all{
+        margin:0 auto;
+        width:230px;
+        height:90px;
+        line-height: 90px;
+        text-align: center;
+        font-weight: bold;
+        color:#00aaf0;
+        display: block;
+        background: images("read-all.jpg");
+        span{
+            font-family:serif;
+            font-weight: bold;
+            position: relative;
+            top:1px;
+            left:3px;
+        }
+        &:hover{
+            color:#0095da;
+            sapn{
+                color:#0095da;
+            }
+        }
+    }
+}

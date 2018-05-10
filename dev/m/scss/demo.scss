@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*
+* @Author: fengjj
+* @Date:   2018-03-07
+*/
+
+// 主要入口配置
+@import "libs/setting";
+@import "libs/mixin-css3";
+
+/* ----------- components -------------- */
+
+// extend继承类 (%)
+@import "components/extend";
+@import "components/swiper";
+
+
+@import "pageModules/buyDetail";
+
+

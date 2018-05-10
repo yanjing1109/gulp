@@ -1,0 +1,104 @@
+/* reset */
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section{
+    padding:0;
+    margin:0;
+}
+html{
+  user-select: none;
+  height:100%;
+  overflow-y:scroll;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+  font-size: 100%;
+}
+ul, li, ol {
+  list-style: none;
+}
+em,i {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong, b {
+  font-weight: normal;
+}
+input,button,textarea,:focus{
+    outline:none;
+}
+body {
+  color: $body-color;
+  background-color:$body-bg;
+  // font-family: $font-family;
+  font-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  position:relative;
+  height:100%;
+}
+a {
+  text-decoration: none;
+  color:$base-link-color;
+  // &:hover, &:visited{
+  //   color:$base-link-color;
+  // }
+}
+.clearfix {
+    @extend %clearfix;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit
+}
+button {
+  overflow: visible
+}
+button, select {
+  text-transform: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default
+}
+input {
+  line-height: normal;
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea,input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+input::-ms-clear {
+  display: none;
+}
+::-webkit-input-placeholder {
+    color:$placeholder-color;
+    opacity: $placeholder-opa;
+}
+:-moz-placeholder {
+    color:$placeholder-color;
+    opacity: $placeholder-opa;
+}
+::-moz-placeholder {
+    color:$placeholder-color;
+    opacity: $placeholder-opa;
+}
+:-ms-input-placeholder {
+    color:$placeholder-color;
+    opacity: $placeholder-opa;
+}
+/* end reset */

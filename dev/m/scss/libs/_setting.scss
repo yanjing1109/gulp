@@ -1,0 +1,69 @@
+
+// include Function
+@import "function";
+
+
+$imageVersion                   : true       !default; // 开启图片版本号
+$version                        : 20171019   !default; // 设置总版本号 > [单独频道可独立设置$version]
+$absPath                        : true       !default; // 开启绝对路径
+
+//----------------------------------------------------
+// images version switch
+//----------------------------------------------------
+@if $imageVersion {
+  $version : "#{$version}" !global; // version
+}@else{
+  $version : "" !global;
+}
+
+//----------------------------------------------------
+// Path absolute switch
+//----------------------------------------------------
+@if $absPath {
+  $asset-base-path     : "/2345org/m/" !global;
+}@else{
+  $asset-base-path     : "2345org/m/" !global;
+}
+
+
+//----------------------------------------------------
+// !Base layout config
+//----------------------------------------------------
+
+
+//----------------------------------------------------
+// !Primary colors
+//----------------------------------------------------
+$c-primary                               : #f2320c !default;
+$c-gray-light                            : #999    !default;
+$c-gray                                  : #666    !default;
+$c-gray-dark                             : #333    !default;
+$c-orange                                : $c-primary;
+
+
+//----------------------------------------------------
+// !Reset config
+//----------------------------------------------------
+
+$body-bg                                 : #f2f2f2         !default; // 设置body背景色
+$body-color                              : $c-gray         !default; // 设置body字体颜色
+$base-link-color                         : #333    !default; // 设置全局链接颜色
+$font-family                             : PingFangSC-Regular, Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial; // 设置文字字体
+//$font-family                             : "Microsoft YaHei"; // 设置文字字体
+
+//----------------------------------------------------
+// !Placeholder  config
+//----------------------------------------------------
+$placeholder-color                       : $c-gray-light;
+$placeholder-opa                         : 1;
+
+//----------------------------------------------------
+// Border color
+//----------------------------------------------------
+$base-border-color                       : #ebebeb;
+$base-border-color-dark                  : #d8d8d8;
+
+%common-spr{
+    background:images('common-spr.png') no-repeat;
+    background-size: 500px 500px;
+}
